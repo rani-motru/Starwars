@@ -1,0 +1,3 @@
+mkdir_(directory name) --creates a directory
+touch_(file name)  ----creates a new file
+
