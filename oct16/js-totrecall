@@ -423,23 +423,30 @@ Test your function on every vowel and make sure it's working.
  In general, when you write functions, 
  Take a minute to test them with different values to make sure they behave the way you want.*/
 //  function isVowel(char) {
-//     if (char.toLowerCase() == 'a' ||char == 'e'||char == 'i'||char == 'o'||char == 'u') return true;
+//     if (char.toLowerCase() === 'a' ||char === 'e'||char === 'i'||char === 'o'||char === 'u') return true;
 //     return false;
 
 //  }
 
 //  console.log(isVowel('j'))
+//  console.log(isVowel('R'))
 //=========================================================================
 /*E. getTwoLengths
 Write a function getTwoLengthsthat accepts two parameters (strings). 
 The function should return an array of numbers where each number is 
 the length of the corresponding string.
  */
+//=========================================================================
+
 // function getTwoLengths(str1,str2) {
-//     return [str1.length ,str2.length]
+//     return [str1.length ,str2.length] 
 // }
 
-// console.log(`The length of two strings are : ${getTwoLengths("akshitha","Ashvik")}`)
+//  //const var1= getTwoLengths("akshitha","Ashvik");
+// // console.log(var1)
+// console.log(`The length of two strings are : ${getTwoLengths("Brittany","Ashvik")}`)
+// //console.log(getTwoLengths("Brittany","Ashvik"))
+
 // //========================================================================
 // /* F. getMultipleLengths
 // Write a function getMultipleLengthsthat accepts a single parameter as an argument: an array of strings. 
@@ -449,8 +456,13 @@ the length of the corresponding string.
 //     return [str1.length ,str2.length,str3.length,str4.length,str5.length]
 // }
 
-// console.log(`The length of two strings are : ${getMultipleLengths("akshitha","Ashvik","rani","ravi","family")}`)
-
+// console.log(`The length of the strings are : ${getMultipleLengths("akshitha","Ashvik","rani","ravi","family")}`)
+// The other way is 
+    function getMultipleLengths(multiple) {
+        return multiple.map(str => str.length)
+    }
+    const words = ['iphone','Samsung galaxy','google pixel','oneplus','motorola edge']
+    console.log(`The Length of Multiple Strings are: ${getMultipleLengths(words)}`)
 //====================================================================
 /*G. maxOfThree
 Define a function maxOfThreethat takes three numbers as arguments 
@@ -460,18 +472,19 @@ it doesn't matter which one is returned.If the two largest numbers are the same,
   Be sure to test it with larger values in each of the three locations. */
 //=========================================================================
 // function maxOfThree(num1,num2,num3) {
+//     //  6
 //     if(num1 >=num2 && num1>=num3){
 //         return num1
 //     } else if(num2 >=num1 && num2 >=num3) {
 //         return num2
 //     } else return num3;
 // }
-// console.log(`The Max of Three Numbers is: `,maxOfThree(9,19,73))
-// the other way is:
+// console.log(`The Max of Three Numbers is: `,maxOfThree(6,9,1))
+// //the other way is:
 // function maxOfThree(num1,num2,num3) {
 //         return Math.max(num1,num2,num3)
 //         } 
-//     console.log(`The Max of Three Numbers is: `,maxOfThree(9,19,73))
+//     console.log(`The other way to get  Max of Three Numbers is: `,maxOfThree(9,19,73))
     
 //====================================================================
 /*H. printLongestWord
@@ -498,159 +511,159 @@ the method should return the word that appears first in the array.*/
 Create an object called user.
 Write in to the object the key-value pairs for name, email, age, and purchased. Set the value of purchasedto an empty array []. Set the other values to whatever you would like.
  */
-const user ={
-    name: 'Rani ',
-    email: 'rani.motru@icloud.com',
-    age:  29,
-    purchased: [],
-    friend: {
-        name: 'Ashvik',
-        age: 20,
-        location: 'Australia',
-        purchased: []
-    }
-}
-console.log(user)
-//==============================================================================
-/**B. Update the user
-Our user has changed his or her email address.
- Without changing the original userobject, update the emailvalue to a new email address.
-Our user has had a birthday! Without changing the original userobject,
- increment the agevalue using the postfix operator. Hint: age++  */
-
-//  user.email = 'rani.motru@gmail.com'
-//  console.log('the changed email id of the user is',user.email)
-//  user.age++
-//  console.log(`Happy Birthday!! you are ,${user.age} old!` )
-
- //=============================================================================
- /**C. Adding keys and values
-You have decided to add your user's location to the data that you want to collect.
-
-Without changing the original userobject, add a new key locationto the object, and give it a value or some-or-other location (a string).
- */
-
-user.location = 'ohio'
-// console.log(user)
-
-//==============================================================================
-/**D. Shopaholic!
-Our user has purchased an item! They have purchased some "carbohydrates". Using .push(), add the string "carbohydrates" to the purchasedarray.
-Our user has purchased an item! They have purchased some "peace of mind". Using .push(), add the string "peace of mind" to the purchasedarray.
-Our user has purchased an item! They have purchased some "Merino jodhpurs". Using .push(), add the string "Merino jodhpurs" to the purchasedarray.
-Console.log just the "Merino jodhpurs" from the purchasedarray.
- */
-
-user.purchased.push('carbohydrates','peace of mind','Merino jodhpurs')
-console.log(`The purchased list of USer is `,user.purchased)
-//to get Merino jodhpurs from Purchsed
-// console.log(user.purchased[2])
-//=================================================================================
-//E. Object-within-object
-//==================================================================================
-/**Write a friendobject into your userobject and give the friend a name, age, location, and purchased array (empty for now)
-Console.log just the friend's name
-Console.log just the friend's location
-CHANGE the friend's age to 55
-The friendhas purchased "The One Ring". Use .push()to add "The One Ring" to the friend's purchasedarray.
-The friendhas purchased "A latte". Use .push()to add "A latte" to the friend's purchasedarray.
-Console.log just "A latte" from the friend's purchasedarray.
- */
-// after adding Friend's name,age ,location and Purchased.
-// console.log('The Updated object is ',user)
-// console.log('The User\'s friend name is ',user.friend.name)
-// console.log('The User\'s friend location is ',user.friend.location)
-// //user.friend.age = 55
-// console.log('The update age of Friend is ',user.friend.age=55)
-// //To add "The One Ring" and "A latte"
-// user.friend.purchased.push('The One Ring','A latte')
-// console.log('the purchased list of friend is',user.friend.purchased)
-// //to get the 'A latte'
-// console.log('the purchased list of friend is',user.friend.purchased[1])
-// //==========================================================================
-/**F. Loops
-Write a for loop that iterates over the User's purchasedarray (NOT the friend's purchased array), 
-and prints each element to the console.
-Write a for loop that iterates over the Friend's purchasedarray, 
-and prints each element to the console. */
-//==============================================================================
-// FOR LOOP FOR USER PURCHASED
-//  for (let i=0;i <user.purchased.length;i++){
-//     console.log(`The USer Purchased items are :`,user.purchased[i])
-//  }
- 
-// // FOR LOOP FOR FRIENDS PURCHASED
-//  for (let i=0;i <user.friend.purchased.length;i++){
-//     console.log(`The FRIEND  Purchased items are :`,user.friend.purchased[i])
-//  }
-//=========================================================================
-/**G. Functions can operate on objects
-Write a single function updateUserthat takes no parameters. 
-When the function is run, it should:
-it should increment the user's age by 1
-make the user's name uppercase */
-//==========================================================================
-// function updateUser() {
-//     user.age++
-//     user.name = user.name.toUpperCase()
+// const user ={
+//     name: 'Rani ',
+//     email: 'rani.motru@icloud.com',
+//     age:  29,
+//     purchased: [],
+//     friend: {
+//         name: 'Ashvik',
+//         age: 20,
+//         location: 'Australia',
+//         purchased: []
+//     }
 // }
-//  updateUser();
-//  console.log(user)
+// console.log(user)
+// //==============================================================================
+// /**B. Update the user
+// Our user has changed his or her email address.
+//  Without changing the original userobject, update the emailvalue to a new email address.
+// Our user has had a birthday! Without changing the original userobject,
+//  increment the agevalue using the postfix operator. Hint: age++  */
 
- //2 function oldAndLoud
- function oldAndLoud(person){
-    person.age++
-    person.name = person.name.toUpperCase()
+// //  user.email = 'rani.motru@gmail.com'
+// //  console.log('the changed email id of the user is',user.email)
+// //  user.age++
+// //  console.log(`Happy Birthday!! you are ,${user.age} old!` )
+
+//  //=============================================================================
+//  /**C. Adding keys and values
+// You have decided to add your user's location to the data that you want to collect.
+
+// Without changing the original userobject, add a new key locationto the object, and give it a value or some-or-other location (a string).
+//  */
+
+// user.location = 'ohio'
+// // console.log(user)
+
+// //==============================================================================
+// /**D. Shopaholic!
+// Our user has purchased an item! They have purchased some "carbohydrates". Using .push(), add the string "carbohydrates" to the purchasedarray.
+// Our user has purchased an item! They have purchased some "peace of mind". Using .push(), add the string "peace of mind" to the purchasedarray.
+// Our user has purchased an item! They have purchased some "Merino jodhpurs". Using .push(), add the string "Merino jodhpurs" to the purchasedarray.
+// Console.log just the "Merino jodhpurs" from the purchasedarray.
+//  */
+
+// user.purchased.push('carbohydrates','peace of mind','Merino jodhpurs')
+// console.log(`The purchased list of USer is `,user.purchased)
+// //to get Merino jodhpurs from Purchsed
+// // console.log(user.purchased[2])
+// //=================================================================================
+// //E. Object-within-object
+// //==================================================================================
+// /**Write a friendobject into your userobject and give the friend a name, age, location, and purchased array (empty for now)
+// Console.log just the friend's name
+// Console.log just the friend's location
+// CHANGE the friend's age to 55
+// The friendhas purchased "The One Ring". Use .push()to add "The One Ring" to the friend's purchasedarray.
+// The friendhas purchased "A latte". Use .push()to add "A latte" to the friend's purchasedarray.
+// Console.log just "A latte" from the friend's purchasedarray.
+//  */
+// // after adding Friend's name,age ,location and Purchased.
+// // console.log('The Updated object is ',user)
+// // console.log('The User\'s friend name is ',user.friend.name)
+// // console.log('The User\'s friend location is ',user.friend.location)
+// // //user.friend.age = 55
+// // console.log('The update age of Friend is ',user.friend.age=55)
+// // //To add "The One Ring" and "A latte"
+// // user.friend.purchased.push('The One Ring','A latte')
+// // console.log('the purchased list of friend is',user.friend.purchased)
+// // //to get the 'A latte'
+// // console.log('the purchased list of friend is',user.friend.purchased[1])
+// // //==========================================================================
+// /**F. Loops
+// Write a for loop that iterates over the User's purchasedarray (NOT the friend's purchased array), 
+// and prints each element to the console.
+// Write a for loop that iterates over the Friend's purchasedarray, 
+// and prints each element to the console. */
+// //==============================================================================
+// // FOR LOOP FOR USER PURCHASED
+// //  for (let i=0;i <user.purchased.length;i++){
+// //     console.log(`The USer Purchased items are :`,user.purchased[i])
+// //  }
  
-    return person
- }
+// // // FOR LOOP FOR FRIENDS PURCHASED
+// //  for (let i=0;i <user.friend.purchased.length;i++){
+// //     console.log(`The FRIEND  Purchased items are :`,user.friend.purchased[i])
+// //  }
+// //=========================================================================
+// /**G. Functions can operate on objects
+// Write a single function updateUserthat takes no parameters. 
+// When the function is run, it should:
+// it should increment the user's age by 1
+// make the user's name uppercase */
+// //==========================================================================
+// // function updateUser() {
+// //     user.age++
+// //     user.name = user.name.toUpperCase()
+// // }
+// //  updateUser();
+// //  console.log(user)
 
- //oldAndLoud(user);
- console.log(oldAndLoud(user))
+//  //2 function oldAndLoud
+//  function oldAndLoud(person){
+//     person.age++
+//     person.name = person.name.toUpperCase()
+ 
+//     return person
+//  }
 
- //===============================================================
- /**Cat Combinator */
- //1. Mama cat  -name ,breed,age
- /**cAT1: name: "Joe", age: 19, breed: "Mog" }
+//  //oldAndLoud(user);
+//  console.log(oldAndLoud(user))
 
-{ CAT2 name: "Jam", age: 45, breed: "Siamese" } */
+//  //===============================================================
+//  /**Cat Combinator */
+//  //1. Mama cat  -name ,breed,age
+//  /**cAT1: name: "Joe", age: 19, breed: "Mog" }
 
-   const cat1 ={
-    name: 'Joe',
-    breed: 'Mog',
-    age: 19
+// { CAT2 name: "Jam", age: 45, breed: "Siamese" } */
 
-   }
-   console.log('The Mama Cat\'s age is:', cat1.age)
-   console.log('The Mama Cat\'s breed is',cat1.breed )
+//    const cat1 ={
+//     name: 'Joe',
+//     breed: 'Mog',
+//     age: 19
 
-   //
-   const cat2 ={
-    name: 'Jam',
-    breed: 'Siamese',
-    age: 45
+//    }
+//    console.log('The Mama Cat\'s age is:', cat1.age)
+//    console.log('The Mama Cat\'s breed is',cat1.breed )
 
-   }
-//    //=======================================================
-   //3. Combine Cats!
-   //========================================================
-   /**Write a function combineCatsthat has two parameters mama, and papa.
-    *  The function will take two arguments -- each a cat object.
+//    //
+//    const cat2 ={
+//     name: 'Jam',
+//     breed: 'Siamese',
+//     age: 45
 
-      Pass cat1and cat2as arguments to the combineCatsfunction.
-       The function should console.log them. */
-   //==============================================================
+//    }
+// //    //=======================================================
+//    //3. Combine Cats!
+//    //========================================================
+//    /**Write a function combineCatsthat has two parameters mama, and papa.
+//     *  The function will take two arguments -- each a cat object.
+
+//       Pass cat1and cat2as arguments to the combineCatsfunction.
+//        The function should console.log them. */
+//    //==============================================================
      
-    function combineCats(mama, papa) {
-        const baby ={
-            name: mama.name +papa.name,
-            age: 1,
-            breed: mama.breed+'-'+papa.breed
-        }
-        return (baby)
-    }
+//     function combineCats(mama, papa) {
+//         const baby ={
+//             name: mama.name +papa.name,
+//             age: 1,
+//             breed: mama.breed+'-'+papa.breed
+//         }
+//         return (baby)
+//     }
 
-    //console.log(combineCats(cat1,cat2))
+//     //console.log(combineCats(cat1,cat2))
 
-    //
-    console.log(combineCats(combineCats(combineCats(cat1, cat2), combineCats(cat1, cat2)),combineCats(combineCats(cat1, cat2), combineCats(cat1, cat2))))
+//     //
+//     console.log(combineCats(combineCats(combineCats(cat1, cat2), combineCats(cat1, cat2)),combineCats(combineCats(cat1, cat2), combineCats(cat1, cat2))))
