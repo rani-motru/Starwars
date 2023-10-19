@@ -1,0 +1,656 @@
+/*Q & A
+we create the variables using: LET ,CONST ,VAR (lower case)
+ Q. how do we assign a value  to a variable?
+ A. To assign a value we use a single  = to assign the value to the varaibale
+   ex: variable -name = value 
+
+ Q.How do we change the value of a variable?
+ A. variable -name = value  or moving one variable value to the other variable.
+ Q.How do we assign an existing variable to a new variable?
+ A. ariable -name = value  or moving one variable value to the other variable.
+ 
+ Q.Remind me, what are declare, assign, and define?
+ 
+ A. DECLARE : let vaiable name ex: let x;
+    ASSIGN : variable-name = value 
+    DEFINE : giving a value at the time of defining a variable
+             let variable-name = value; ex: let x = 5; 
+
+ Q. What is pseudocoding and why should you do it?
+ 
+ A.writing the solution in words before coding.
+ 
+ Q.What are the types of variables in JavaScript?
+ A. numbers, string,array,object,boolean
+ */
+//============================================
+/* B. Strings
+For all other questions that involve writing code, you can solve them via the following instructions.
+
+//Q.Create a variable called firstVariable?
+//Q.Assign it the value of the string "Hello World"
+//Q.Change the value of this variable to some number
+*///A.
+//============================================
+// let firstVariable;
+//    firstVariable = 'Hello World!'
+//    console.log(firstVariable)
+//    firstVariable = 10;
+//    console.log('the new firstVariable: ',firstVariable)
+
+//Q.Store the value of firstVariablein a new variable called secondVariable;?
+    // let secondVariable = firstVariable
+    // console.log('The secondVariable is ',secondVariable)
+//Q.Change the value of secondVariableto any string.
+//      secondVariable ='Hello Rani'
+//      console.log('The new secondVariable is ',secondVariable)
+//Q.What is the value of firstVariable?
+//    console.log('The vlaue of firstVariable : ', firstVariable)
+/* Q. Create a variable called yourNameand set it equal to your name as a string. Then, write an expression that takes the string "Hello, my name is " and the variable yourNameso that it returns a new string with them concatenated.
+ex: Hello, my name is Jean Valjean
+//    Answer*/ 
+//  let yourName = 'Akshitha'
+//  console.log(`Hello, My name is `, yourName)
+//============================================
+/*C. Booleans
+Using the provided variable definitions, 
+replace the blanks so that all log statements print true in the console.
+Answers should be all be valid JS syntax and not weird things that don't make sense but happen to print trueto the console
+//============================================
+*/
+// const a = 4;
+// const b = 53;
+// const c = 57;
+// const d = 16;
+// const e = 'Kevin';
+
+// console.log(a !== b);
+// console.log(c  > d);
+// console.log('rani' === 'rani');
+// FOR THE NEXT TWO, USE ONLY && OR ||
+// console.log(true || false);
+// console.log(false || false && false && false || false || true);
+// console.log(false == false)
+// console.log(e  == 'Kevin');
+// console.log(a == -(b - c)); // note: a < b < c is NOT CORRECT (and is not a valid JS expression, think about using other math operations)
+// console.log(a != a + d); // note: the answer is a simple arithmetic equation, not something "weird"
+// console.log(48 == '48');
+//============================================
+/*D. The farm
+Declare a variable animal. Set it to be either "cow" or something else
+Write code that will print out "mooooo" if the it is equal to cow
+Change your code so that if the variable animalis anything other than a cow, it will print "Hey! You're not a cow."
+Commit
+*/
+//============================================
+
+// let  animal = 'cow'
+// if( animal === 'cow') {
+//     console.log('mooooo')
+// } else {
+//     console.log(`Hey! You're not a cow.`)
+// }
+//============================================
+/*E. Driver's Ed
+Make a variable that holds a person's age; be semantic
+Write code that will print out "Here are the keys!", if the age is 16 years or older, or, if the age is younger than 16, a message should print "Sorry, you're too young."
+*/
+//============================================
+// let age = 10;
+// if(age >= 16) {
+//     console.log("Here are the keys!")
+// } else if{
+//     console.log("Sorry, you're too young.")
+// } else {
+//     console.log("That's not a real age")
+//   }
+//============================================
+/*II. Loops
+Remember: USE letwhen you initialize your for loops!
+
+This is GOOD: for(let i = 0; i < 100; i++)
+
+This is NO GOOD: for(i = 0; i < 100; i++)
+
+A. The basics
+Write a loop that will print out all the numbers from 0 to 10, inclusive
+Write a loop that will print out all the numbers from 10 up to and including 400
+Write a loop that will print out every third number starting with 12 and going no higher than 4000
+*/
+//============================================
+//  for(let i = 0; i<= 10;i++)
+//  {
+//     console.log(i)
+//  }
+
+//  console.log('to print from 10 to 400')
+//  for(let j = 10; j<=400; j++){
+//     console.log(j)
+//  }
+//let x=[]
+//  console .log('to print every third number from 12 till 4000')
+//   for(let k = 4; k <= 1333; k++)
+//   {
+//     let m =k*3;
+//      console.log(m)
+//     x.push(m)
+//   }
+//  console.log(x.length)
+//another way to do to print from 12 to 4000
+// for(let i =12 ; i < 4000 ;i+=3)
+// {
+//     console.log(i)
+// }
+//============================================ 
+/*B. Get even
+Print out the numbers that are within the range of 1 - 100
+Adjust your code to add a message next to even numbers only that says: "<-- is an even number"
+*/
+//============================================
+// for(let r =1 ;r <= 100; r++)
+// {
+//     if(r % 2 ==0){
+//         console.log( r ,'<-- is an even number')
+//     }
+// }
+//============================================
+/*C. Give me Five
+For the numbers 0 - 100, print out "I found a number. 
+High five!" if the number is a multiple of five*/
+/*Add to the code from above to print out "I found a number.
+ Three is a crowd" if the number is a multiple of three
+For numbers divisible by both three and five, 
+be sure your code prints both messages
+*/
+//============================================
+// for(let n =0; n<=100; n++)
+// {   
+//     if((n % 5 ==0) && ( n % 3 == 0)){
+//         console.log(`I found a `+ n +`. High five!Three is a crowd`) 
+//     }else if(n % 5 ==0){
+//         console.log(`I found a `+ n +`. High five!`)
+//     } else if( n % 3 == 0) {
+//         console.log(`I found a `+ n +`. Three is a crowd`)
+//     }
+// }
+//============================================
+/*D. Savings account
+Write code that will save the sum of all the numbers between 1 - 10 to a variable called bank_account.
+Check your work! Your bank_account should have $55 in it.
+
+You got a bonus! Your pay is now doubled each week. Write code that will save the sum of all the numbers between 1 - 100 multiplied by 2.
+Check your work! Your bank_account should have $10,100 in it.
+*/
+//============================================
+// let bank_account = 0
+// for(let a = 0;a<=10;a++){
+//     bank_account =bank_account + a
+// }
+// console.log(' Your bank_account is ',bank_account)
+// //now to sum of 1-100 multiplied by 2 
+// let sum = 0
+// for(let b = 0;b<=100;b++){
+//    sum =sum + b
+// }
+// bank_account =sum*2
+//*** we can also dotis in differnt way */
+//to print the money with separator
+// const money = bank_account.toLocaleString('en-US', {style:'currency',currency: 'USD'})
+// console.log('the doubled sum of 1-100 is', money)
+
+
+//============================================
+/*III. Arrays & Control flow
+
+A. Talk about it:
+What are the things in an array called?
+Do Arrays guarantee those things will be in order?
+What real-life thing could you model with an array
+
+B. Easy Does It
+Create an array that contains three quotes and store it in a variable called quotes
+*/
+//============================================
+
+// let quotes = ['time is money','Things will work out','The best is yet to come']
+// console.log(quotes[1])
+
+//============================================
+/*C. Accessing elements
+Given the following array const randomThings = [1, 10, "Hello", true]
+
+How do you access the 1st element in the array?
+Change the value of "Hello"to "World"
+Check the value of the array to make sure it updated the array. How? Why, yes! console.log();
+*/
+//============================================
+
+// const randomThings = [1, 10, "Hello", true]
+// console.log(randomThings[0])
+// //Change the value of "Hello"to "World"
+// randomThings[2] = "World"
+// console.log(randomThings)
+
+//============================================
+/*
+D. Change values
+Given the following array const ourClass = ["Salty", "Zoom", "Sardine", "Slack", "Github"]
+
+What would you write to access the 3rd element of the array?
+Change the value of "Github" to "Octocat"
+Add a new element, "Cloud City" to the array
+*/
+//============================================
+/*E. Mix It Up
+Note: You don't really need .splice()for these. You could use it, but there are simpler array methods that are more appropriate.
+
+Given the following array: const myArray = [5, 10, 500, 20]
+
+Add the string "Aegon"to the end of the array. 
+Add another string of your choice to the end of the array.
+Remove the 5from the beginning of the array.
+Add the string "Bob Marley"to the beginning of the array.
+Remove the string of your choice from the end of the array.
+Reverse this array using Array.prototype.reverse(). 
+Did you mutate the array? What does mutate mean? 
+Did the .reverse()method return anything?*/
+//============================================
+// const myArray = [5, 10, 500, 20]
+// console.log("Before doing the changes to array ")
+// console.log(myArray)
+// myArray.push('Aegon')
+// console.log(myArray)
+// console.log('remove the 5th element')
+// myArray.pop()
+// console.log(myArray)
+// console.log('adding a String "Bob Marley" in the begining element')
+// myArray.unshift("Bob Marley")
+// console.log(myArray)
+// console.log('remove the first element')
+// myArray.shift()
+// console.log(myArray)
+// console.log("Reverse the array")
+// myArray.reverse()
+// console.log(myArray)
+
+
+//============================================
+/*
+F. Biggie Smalls
+Create a variable that contains an integer.
+
+Write an if ... elsestatement that:
+
+console.log()s "little number" if the number is entered is less than 100
+console.log()s big numberif the number is greater than or equal to 100.
+*/
+//============================================
+
+// let num = 78
+// if(num > 100){
+//     console.log("Big Number")
+// } else {
+//     console.log("Little Number")
+// }
+
+//============================================
+/* G. Monkey in the Middle
+Write an if ... else if ... elsestatement:
+
+console.log()little numberif the number entered is less than 5.
+If the number entered is more than 10, log big number.
+Otherwise, log "monkey".
+*/
+//===============================================
+// let num = 12
+// if(num < 5){
+//     console.log("Little Number")
+// } else if(num >10){
+//     console.log("big Number")
+// } else {
+//     console.log("Monkey")
+// }
+//=================================================
+/*H. What's in Your Closet?
+Below, we've given you examples of Kristyn and Thom's closets modeled as data in JavaScript.
+
+// Thom's closet is more complicated. Check out this nested data structure!!
+What's Kristyn wearing today? Using bracket notation to access items in kristynsCloset, log the sentence "Kristyn is rocking that " + the third item in Kristyn's closet + " today!" to the console.
+Kristyn just bought some sweet shades! Add "raybans"to her closet after "yellow knit hat".
+Kristyn spilled coffee on her hat... modify this item to read "stained knit hat"instead of yellow.
+Put together an outfit for Thom! Using bracket notation, access the first element in Thom's shirtsarray.
+In the same way, access one item from Thom's pants array.
+Access one item from Thom's accessories array.
+Log a sentence about what Thom's wearing. Example: "Thom is looking fierce in a grey button-up, jeans and wool scarf!"
+Get more specific about what kind of PJs Thom's wearing this winter. Modify the name of his PJ pants to Footie Pajamas.
+*/
+//=================================================
+// const kristynsCloset = [
+//     "left shoe",
+//     "cowboy boots",
+//     "right sock",
+//     "Per Scholas hoodie",
+//     "green pants",
+//     "yellow knit hat",
+//     "marshmallow peeps"
+//   ];
+  
+// // Thom's closet is more complicated. Check out this nested data structure!!
+// const thomsCloset = [
+//     [
+//       // These are Thom's shirts //thoms array[ shirt[], pants[],accessories[]]
+//       "grey button-up",                     //     0[0,1,2,3]   ,1[0,1,2]    ,2
+//       "dark grey button-up",
+//       "light blue button-up",
+//       "blue button-up",
+//     ],[
+//       // These are Thom's pants
+//       "grey jeans",
+//       "jeans",
+//       "PJs"
+//     ],[
+//       // Thom's accessories
+//       "wool mittens",
+//       "wool scarf",
+//       "raybans"
+//     ]
+//   ];  
+//   console.log("To Access the Third item")
+//   console.log("Kristyn is rocking that " + kristynsCloset[2] + " today!" )
+//   // To add a variable after a particular variable we need to use "splice"
+//   kristynsCloset.splice(6,0,"rayban") // arrayname.splice(index+1 ,length, 0(this specifes that  to insert the element  at specific index),element or string we want to add)
+//   console.log(kristynsCloset)
+//   //modify this item to read "stained knit hat"instead of yellow.
+//   kristynsCloset[5] = "stained knit hat"
+//   console.log(kristynsCloset)
+//   // access the first element in Thom's shirtsarray.
+//   console.log(thomsCloset[0][0])
+// //one item from Thom's pants array.
+// console.log(thomsCloset[1][1])
+// //Access one item from Thom's accessories array.
+// console.log(thomsCloset[2][2])
+// console.log("Thom is looking fierce in a "+ thomsCloset[0][0]+","+ thomsCloset[1][1] +  " and " + thomsCloset[2][2] )
+// //Modify the name of his PJ pants to Footie Pajamas.
+// thomsCloset[1][2] ='Footie pajamas'
+// console.log(thomsCloset)
+//==============================================================
+/*IV. Functions
+
+A. printGreeting
+Do you think you could write a function called printGreetingwith a parameter
+ name that returns a greeting with the argument interpolated into the greeting?
+
+Like so?
+*/
+//==============================================================
+
+// function printGreeting (name1){
+//    // Interpolation means using backticks `` and for variable ${variable}
+//    return `Hello There, ${name1}!`;
+// }
+// const greeting = printGreeting("Slimer")
+//  console.log(greeting)
+//console.log(printGreeting("Slimer"));
+
+//=================================================================
+/*
+B. printCool
+Write a function printCoolthat accepts one parameter, nameas an argument.
+ The function should print the name and a message saying that that person is cool.
+*/
+//====================================================================
+//this is another way of writing the above code
+// function printCool(name) {
+//     console.log(`${name} is cool!!`)
+// }
+// printCool("Captain Reynolds")
+//====================================================================
+/* C. calculateCube
+Write a function calculateCubethat takes a single number and 
+// prints the volume of a cube made from that number.*/
+// function calculateCube (single)
+// {
+//   return single*single*single
+// }
+
+// console.log(`the volume of a cube is : ${calculateCube(2)}`)
+//=====================================================================
+/*D. isVowel
+Write a function isVowelthat takes a character (i.e. a string of length 1)
+ and returns true if it is a vowel, false otherwise. 
+The vowel could be upper or lower case. 
+Test your function on every vowel and make sure it's working.
+ In general, when you write functions, 
+ Take a minute to test them with different values to make sure they behave the way you want.*/
+//  function isVowel(char) {
+//     if (char.toLowerCase() == 'a' ||char == 'e'||char == 'i'||char == 'o'||char == 'u') return true;
+//     return false;
+
+//  }
+
+//  console.log(isVowel('j'))
+//=========================================================================
+/*E. getTwoLengths
+Write a function getTwoLengthsthat accepts two parameters (strings). 
+The function should return an array of numbers where each number is 
+the length of the corresponding string.
+ */
+// function getTwoLengths(str1,str2) {
+//     return [str1.length ,str2.length]
+// }
+
+// console.log(`The length of two strings are : ${getTwoLengths("akshitha","Ashvik")}`)
+// //========================================================================
+// /* F. getMultipleLengths
+// Write a function getMultipleLengthsthat accepts a single parameter as an argument: an array of strings. 
+// The function should return an array of numbers where each number is the length of the corresponding string.*/
+
+// function getMultipleLengths(str1,str2,str3,str4,str5) {        
+//     return [str1.length ,str2.length,str3.length,str4.length,str5.length]
+// }
+
+// console.log(`The length of two strings are : ${getMultipleLengths("akshitha","Ashvik","rani","ravi","family")}`)
+
+//====================================================================
+/*G. maxOfThree
+Define a function maxOfThreethat takes three numbers as arguments 
+and returns the largest of them. If all numbers are the same, 
+it doesn't matter which one is returned.If the two largest numbers are the same,
+ one of them should be returned.
+  Be sure to test it with larger values in each of the three locations. */
+//=========================================================================
+// function maxOfThree(num1,num2,num3) {
+//     if(num1 >=num2 && num1>=num3){
+//         return num1
+//     } else if(num2 >=num1 && num2 >=num3) {
+//         return num2
+//     } else return num3;
+// }
+// console.log(`The Max of Three Numbers is: `,maxOfThree(9,19,73))
+// the other way is:
+// function maxOfThree(num1,num2,num3) {
+//         return Math.max(num1,num2,num3)
+//         } 
+//     console.log(`The Max of Three Numbers is: `,maxOfThree(9,19,73))
+    
+//====================================================================
+/*H. printLongestWord
+Write a function printLongestWordthat accepts a single argument,an array of strings. 
+The method should return the longest word in the array.In case of a tie, 
+the method should return the word that appears first in the array.*/
+//=======================================================================
+// function printLongestWord(arr) {
+//     let longWord = ''
+//         for(let i =0;i< arr.length;i++){
+//             if(longWord.length < arr[i].length) {
+//                 longWord = arr[i] 
+//             }
+//         }
+//         return longWord
+         
+//     }
+//   console.log(printLongestWord(['doctor Akshitha B','teacher','scientist ravi','astronaut ashvik','developer','manager']))
+
+//============================================================================
+ //OBJECTS
+//============================================================================
+/*A. Make a user object
+Create an object called user.
+Write in to the object the key-value pairs for name, email, age, and purchased. Set the value of purchasedto an empty array []. Set the other values to whatever you would like.
+ */
+const user ={
+    name: 'Rani ',
+    email: 'rani.motru@icloud.com',
+    age:  29,
+    purchased: [],
+    friend: {
+        name: 'Ashvik',
+        age: 20,
+        location: 'Australia',
+        purchased: []
+    }
+}
+console.log(user)
+//==============================================================================
+/**B. Update the user
+Our user has changed his or her email address.
+ Without changing the original userobject, update the emailvalue to a new email address.
+Our user has had a birthday! Without changing the original userobject,
+ increment the agevalue using the postfix operator. Hint: age++  */
+
+//  user.email = 'rani.motru@gmail.com'
+//  console.log('the changed email id of the user is',user.email)
+//  user.age++
+//  console.log(`Happy Birthday!! you are ,${user.age} old!` )
+
+ //=============================================================================
+ /**C. Adding keys and values
+You have decided to add your user's location to the data that you want to collect.
+
+Without changing the original userobject, add a new key locationto the object, and give it a value or some-or-other location (a string).
+ */
+
+user.location = 'ohio'
+// console.log(user)
+
+//==============================================================================
+/**D. Shopaholic!
+Our user has purchased an item! They have purchased some "carbohydrates". Using .push(), add the string "carbohydrates" to the purchasedarray.
+Our user has purchased an item! They have purchased some "peace of mind". Using .push(), add the string "peace of mind" to the purchasedarray.
+Our user has purchased an item! They have purchased some "Merino jodhpurs". Using .push(), add the string "Merino jodhpurs" to the purchasedarray.
+Console.log just the "Merino jodhpurs" from the purchasedarray.
+ */
+
+user.purchased.push('carbohydrates','peace of mind','Merino jodhpurs')
+console.log(`The purchased list of USer is `,user.purchased)
+//to get Merino jodhpurs from Purchsed
+// console.log(user.purchased[2])
+//=================================================================================
+//E. Object-within-object
+//==================================================================================
+/**Write a friendobject into your userobject and give the friend a name, age, location, and purchased array (empty for now)
+Console.log just the friend's name
+Console.log just the friend's location
+CHANGE the friend's age to 55
+The friendhas purchased "The One Ring". Use .push()to add "The One Ring" to the friend's purchasedarray.
+The friendhas purchased "A latte". Use .push()to add "A latte" to the friend's purchasedarray.
+Console.log just "A latte" from the friend's purchasedarray.
+ */
+// after adding Friend's name,age ,location and Purchased.
+// console.log('The Updated object is ',user)
+// console.log('The User\'s friend name is ',user.friend.name)
+// console.log('The User\'s friend location is ',user.friend.location)
+// //user.friend.age = 55
+// console.log('The update age of Friend is ',user.friend.age=55)
+// //To add "The One Ring" and "A latte"
+// user.friend.purchased.push('The One Ring','A latte')
+// console.log('the purchased list of friend is',user.friend.purchased)
+// //to get the 'A latte'
+// console.log('the purchased list of friend is',user.friend.purchased[1])
+// //==========================================================================
+/**F. Loops
+Write a for loop that iterates over the User's purchasedarray (NOT the friend's purchased array), 
+and prints each element to the console.
+Write a for loop that iterates over the Friend's purchasedarray, 
+and prints each element to the console. */
+//==============================================================================
+// FOR LOOP FOR USER PURCHASED
+//  for (let i=0;i <user.purchased.length;i++){
+//     console.log(`The USer Purchased items are :`,user.purchased[i])
+//  }
+ 
+// // FOR LOOP FOR FRIENDS PURCHASED
+//  for (let i=0;i <user.friend.purchased.length;i++){
+//     console.log(`The FRIEND  Purchased items are :`,user.friend.purchased[i])
+//  }
+//=========================================================================
+/**G. Functions can operate on objects
+Write a single function updateUserthat takes no parameters. 
+When the function is run, it should:
+it should increment the user's age by 1
+make the user's name uppercase */
+//==========================================================================
+// function updateUser() {
+//     user.age++
+//     user.name = user.name.toUpperCase()
+// }
+//  updateUser();
+//  console.log(user)
+
+ //2 function oldAndLoud
+ function oldAndLoud(person){
+    person.age++
+    person.name = person.name.toUpperCase()
+ 
+    return person
+ }
+
+ //oldAndLoud(user);
+ console.log(oldAndLoud(user))
+
+ //===============================================================
+ /**Cat Combinator */
+ //1. Mama cat  -name ,breed,age
+ /**cAT1: name: "Joe", age: 19, breed: "Mog" }
+
+{ CAT2 name: "Jam", age: 45, breed: "Siamese" } */
+
+   const cat1 ={
+    name: 'Joe',
+    breed: 'Mog',
+    age: 19
+
+   }
+   console.log('The Mama Cat\'s age is:', cat1.age)
+   console.log('The Mama Cat\'s breed is',cat1.breed )
+
+   //
+   const cat2 ={
+    name: 'Jam',
+    breed: 'Siamese',
+    age: 45
+
+   }
+//    //=======================================================
+   //3. Combine Cats!
+   //========================================================
+   /**Write a function combineCatsthat has two parameters mama, and papa.
+    *  The function will take two arguments -- each a cat object.
+
+      Pass cat1and cat2as arguments to the combineCatsfunction.
+       The function should console.log them. */
+   //==============================================================
+     
+    function combineCats(mama, papa) {
+        const baby ={
+            name: mama.name +papa.name,
+            age: 1,
+            breed: mama.breed+'-'+papa.breed
+        }
+        return (baby)
+    }
+
+    //console.log(combineCats(cat1,cat2))
+
+    //
+    console.log(combineCats(combineCats(combineCats(cat1, cat2), combineCats(cat1, cat2)),combineCats(combineCats(cat1, cat2), combineCats(cat1, cat2))))
