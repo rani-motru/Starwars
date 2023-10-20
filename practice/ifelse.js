@@ -22,7 +22,7 @@ const fb = [];
      } else if( i % 5 == 0){
        fb.push('buzz')
  //      console.log('buzz')
-     } else if(i % 3 =0 && i % 5 =0) {
+     } else if(i % 3 ==0 && i % 5 ==0) {
        fb.push('fizzbuzz')
  //      console.log('fizzbuzz')
      } else{
