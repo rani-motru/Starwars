@@ -132,3 +132,26 @@ for(let i= 0;i< 2;i++){
     timmy.exercise();
 }
 console.log(timmy)
+
+//CHEF MAKES DINNERS
+class Dinner {
+    constructor(appetizer,entree,dessert) {
+        this.appetizer = appetizer;
+        this.entree = entree;
+        this.dessert = dessert;
+    }
+}
+
+
+class Chef {
+    menu(appetizer,entree,dessert){
+        return new Dinner(appetizer,entree,dessert)
+    }
+}
+
+const cook = new Chef();
+
+
+console.log(cook.menu('Salad','steak','cake'));
+console.log(cook.menu('Soup','fish','fruit Salad'));
+console.log(cook.menu('chicken Salad','pizza','ice cream'));
