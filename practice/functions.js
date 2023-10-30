@@ -103,6 +103,59 @@
   
 
 
+// function getRandomInt(min, max) {
+//   //BY RANI
+//   min = Math.ceil(min);
+//   max = Math.floor(max);
+//   let n1 = (Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
+//    return (n1/10);
+// }
+function getRandomInt(min, max) {
+  //BY RANI
+  min = Math.ceil(min);
+   max = Math.floor(max);
+  // removed the Math.floor
+  let num =  Math.random() * (max - min) + min; // The maximum is exclusive and the minimum is inclusive
+  return (num.toFixed(3));
+}
+  const randAccuracy = getRandomInt(6, 8);
 
+  console.log(randAccuracy);
 
+// class EnemySpaceShip{
+//   constructor(hull, firepower, accuracy){
+//       this.hull = hull;
+//       this.firepower = firepower;
+//       this.accuracy = accuracy;
+//   }
+//   attack(){
+//       //Rani
+//       // Make sure to program in an if statement checking if you miss or not
+//   }
+//   die(){
+//       //Rani
+//   }
 
+// }
+
+// class Player{
+//   constructor(hull, firepower, accuracy){
+//       this.hull = 20;
+//       this.firepower = 5;
+//       this.accuracy = 0.7;
+//   }
+//   //
+//   attack(target){
+//       if (Math.random() < this.accuracy){
+//           target.hull -=this.firepower;
+//           return [true, this.firepower] //hit
+
+//       } else return false
+//       //Rani
+//       // Make sure to program in an if statement checking if you miss or not
+//   }
+// }
+
+// const num = getRandomInt(6, 8)
+// //  let dec = (num/10);
+// console.log(num)
